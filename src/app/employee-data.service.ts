@@ -10,18 +10,18 @@ export class EmployeeDataService {
   constructor(private http: HttpClient) { }
 
   getEmployeeData(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/employees');
+    return this.http.get<any>('https://json-8g76.onrender.com/employees');
   }
 
   submitEmployeeData(employeeData: any): Observable<any> {
-    return this.http.post('http://localhost:3000/employees', employeeData);
+    return this.http.post('https://json-8g76.onrender.com/employees', employeeData);
   }
 
   deleteEmployee(id: number): Observable<any> {
-    return this.http.delete(`http://localhost:3000/employees/${id}`);
+    return this.http.delete(`https://json-8g76.onrender.com/employees/${id}`);
   }
 
   editEmployee(employee: any): Observable<any> {
-    return this.http.put(`http://localhost:3000/employees/${employee.id}`, employee);
+    return this.http.put(`https://json-8g76.onrender.com/employees/${employee.id}`, employee);
   }
 }

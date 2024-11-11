@@ -18,7 +18,7 @@ export class LandingPageComponentComponent implements OnInit{
 
   ngOnInit(): void {
     this.employeeService.getEmployeeData(). subscribe(data => {
-      this.employees = data.employees; 
+      this.employees = data; 
       this.filteredEmployees = this.employees;
     })
     
