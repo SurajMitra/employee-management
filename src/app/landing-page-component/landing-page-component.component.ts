@@ -17,7 +17,10 @@ export class LandingPageComponentComponent implements OnInit{
   constructor(private employeeService : EmployeeDataService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.employeeService.getEmployeeData(). subscribe(data => {this.employees = data; this.filteredEmployees = this.employees;})
+    this.employeeService.getEmployeeData(). subscribe(data => {
+      this.employees = data.employees; 
+      this.filteredEmployees = this.employees;
+    })
     
   }
 
@@ -29,7 +32,6 @@ export class LandingPageComponentComponent implements OnInit{
     if (this.searchTerm) {
       console.log(this.searchTerm)
       this.filteredEmployees = this.employees.filter(employee => {
-        console.log(this.searchTerm, employee)
         return (
           employee.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
           employee.email.toLowerCase().includes(this.searchTerm.toLowerCase())
