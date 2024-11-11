@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.p-dialog-header{
+    background: aquamarine;
+    height: 30px;
+}
+
+p-button {
+    height: 28px;
+}
+
+.p-dialog-content{
+    padding-top: 20px;
+}
+
+th {
+    background: aquamarine;
+    height: 30px; 
+}

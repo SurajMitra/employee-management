@@ -1,0 +1,14 @@
+.p-dialog {
+    width: 650px;
+}
+
+.secondRow{
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px; 
+    position: fixed;
+    left: 156px;
+  }

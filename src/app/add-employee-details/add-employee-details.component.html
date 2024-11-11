@@ -1,0 +1,88 @@
+<form #emailForm="ngForm" (ngSubmit)="addNewEmployee()">
+            <div class="form-group">
+              <!-- First Row -->
+              <div class="secondRow">
+                <span style="margin-right:15px;">
+                  <label style="padding-right: 15px;">Name</label>
+                  <input 
+                    type="text" 
+                    pInputText 
+                    [(ngModel)]="name" 
+                    name="name" 
+                    required 
+                    style="height: 28px; margin-left:77px" />
+                  <div *ngIf="emailForm.submitted && !name" class="error-message">
+                    required
+                  </div>
+                </span>
+                <span>
+                  <label style="padding-right: 55px;" for="email">Email</label>
+                  <input 
+                    type="email"  
+                    pInputText 
+                    [(ngModel)]="email" 
+                    name="email" 
+                    required 
+                    style="height: 28px;" />
+                  <div *ngIf="emailForm.submitted && !email" class="error-message" style="left:486px">
+                    required
+                  </div>
+                </span>
+              </div>
+          
+              <!-- Second Row -->
+              <div class="secondRow">
+                <span style="margin-right:10px;">
+                  <label style="padding-right: 15px;">Company Name</label>
+                  <input 
+                    type="text" 
+                    pInputText 
+                    [(ngModel)]="companyName" 
+                    name="companyName" 
+                    required 
+                    style="height: 28px;" />
+                  <div *ngIf="emailForm.submitted && !companyName" class="error-message">
+                    required
+                  </div>
+                </span>
+                <span>
+                  <label style="padding-right: 15px;">Contact No.</label>
+                  <input 
+                    type="number" 
+                    pInputText 
+                    [(ngModel)]="contact" 
+                    name="contact" 
+                    required
+                    style="height: 28px;" />
+                  <div *ngIf="emailForm.submitted && !contact" class="error-message" style="left:486px">
+                    required
+                  </div>
+                </span>
+              </div>
+          
+              <!-- Third Row -->
+              <div class="secondRow">
+                <span>
+                  <label style="padding-right: 47px;">Designation</label>
+                  <input 
+                    type="text" 
+                    pInputText 
+                    [(ngModel)]="designation" 
+                    name="designation" 
+                    required 
+                    style="height: 28px;" />
+                  <div *ngIf="emailForm.submitted && designation === ''" class="error-message">
+                    required
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div>
+                <span style="padding-right: 15px;">
+                  <p-button label="Save" type="submit"></p-button>
+                </span>
+                <span>
+                  <p-button label="Cancel" (onClick)="removeAll()"></p-button>
+                </span>
+              </div>
+</form>

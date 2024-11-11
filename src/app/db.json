@@ -1,0 +1,12 @@
+{
+  "employees": [
+    {
+      "name": "Michael Johnson",
+      "companyName": "BuildTech",
+      "email": "michael.johnson@buildtech.com",
+      "contact": "1112223333",
+      "designation": "DevOps Engineer",
+      "id": "ecb0"
+    }
+  ]
+}
