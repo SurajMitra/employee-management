@@ -1,8 +1,6 @@
 const jsonServer = require('json-server');
-const path = require('path'); // Import path module for flexible file path handling
+const path = require('path');
 const server = jsonServer.create();
-
-// Point to the db.json file in the src/assets directory
 const router = jsonServer.router(path.join(__dirname, 'src', 'assets', 'db.json'));
 const middlewares = jsonServer.defaults();
 
